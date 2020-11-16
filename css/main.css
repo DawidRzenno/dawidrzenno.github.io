@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.fixed-header {
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+}
+
+.after-fixed-header {
+    margin-top: 100px;
+}
+
+.quote {
+    overflow: hidden;
+    height: 50vh;
+}
+
+.quote__background {
+    height: 100%;
+    width: 100%;
+}
+
+.background__dark-filter, .background__hue-filter {
+    width: calc(100% - 30px);;
+}
+
+.background__hue-filter {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #005eff;
+    mix-blend-mode: hue;
+}
+
+.background__dark-filter {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.4;
+}
+
+.quote__text {
+    font-family: Arial Black, sans-serif;
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hide {
+    animation: hide 400ms;
+}
+
+.show {
+    animation: show 400ms;
+}
+
+.font-gray {
+    color: gray;
+}
